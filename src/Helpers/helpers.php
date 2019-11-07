@@ -28,3 +28,9 @@ function dd($var) {
     echo '</pre>';
     exit();
 }
+
+function back() {
+    $url = isset($_SESSION['prev_url']) ? $_SESSION['prev_url'] : PUBLIC_PATH;
+    header("Location: $url");
+    exit();
+}
