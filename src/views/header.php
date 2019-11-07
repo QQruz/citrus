@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="container">
-        <nav class="navbar">
+        <nav class="navbar navbar-expand-lg">
             <ul class="navbar-nav">
             <li class="nav-item">
             <a  class="nav-link" href="<?=PUBLIC_PATH?>">Index</a>
