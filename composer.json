@@ -2,5 +2,13 @@
     "name": "qqruz/citrus",
     "description": "test for citrus",
     "type": "project",
-    "require": {}
+    "require": {},
+    "autoload": {     
+        "psr-4": {
+            "App\\": "src/"
+        },
+        "files": [
+            "src/Helpers/helpers.php"
+        ]
+    }
 }
