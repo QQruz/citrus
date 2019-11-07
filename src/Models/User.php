@@ -14,7 +14,13 @@ class User extends Model {
         $sql = "SELECT * FROM $this->table WHERE `username`='$name'";
         $stmt = $this->db->prepare($sql);
         $stmt->execute();
-        $this->setAttributes($stmt->fetch());
-        return $this;
+
+        $row = $stmt->fetch();
+
+        if ($row) {
+            return $this->setAttributes($row);
+        }
+        
+        return null;
     }
 }

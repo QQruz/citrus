@@ -117,8 +117,13 @@ abstract class Model {
         $sql = "SELECT * FROM $this->table WHERE `id`=$id";
         $stmt = $this->db->prepare($sql);
         $stmt->execute();
-        $this->setAttributes($stmt->fetch());
-        return $this;
+        $row = $stmt->fetch();
+
+        if ($row) {
+            return $this->setAttributes($row);
+        }
+        
+        return null;
     }
 
 }

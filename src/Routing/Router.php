@@ -8,7 +8,7 @@ class Router {
 
     public function addRoute(string $method, string $url, string $controller, string $action) {
         $url = rtrim($url, '/');
-        $controller = 'App\Controller\\' . $controller;
+        $controller = 'App\Controllers\\' . $controller;
 
         $this->routes[$method][$url] = [
             'controller' => $controller,

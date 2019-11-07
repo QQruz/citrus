@@ -14,8 +14,6 @@ class Comment extends Model {
         $visible = (int)$visible;
         $sql = "SELECT * FROM $this->table WHERE `approved` = $visible";
 
-        // $sql .= " ";
-
         if ($pageSize) {
             $sql .= " LIMIT $pageSize";
         }

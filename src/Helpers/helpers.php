@@ -29,8 +29,17 @@ function dd($var) {
     exit();
 }
 
-function back() {
-    $url = isset($_SESSION['prev_url']) ? $_SESSION['prev_url'] : PUBLIC_PATH;
+function redirect(string $url) {
     header("Location: $url");
     exit();
 }
+
+function back() {
+    $url = isset($_SESSION['prev_url']) ? $_SESSION['prev_url'] : PUBLIC_PATH;
+    redirect($url);
+}
+
+function _method(string $method) {
+    return '<input type="hidden" name="_method" value="' . $method . '">';
+}
+

@@ -13,6 +13,7 @@ $router->post('/comments', 'CommentController', 'create');
 $router->patch('/comments', 'CommentController', 'approve');
 
 $router->get('/users', 'UserController', 'index');
+$router->get('/login', 'UserController', 'loginPage');
 $router->post('/users', 'UserController', 'login');
 
 
