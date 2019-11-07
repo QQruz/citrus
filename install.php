@@ -20,7 +20,9 @@ $db->exec("CREATE TABLE IF NOT EXISTS `products` (
 $db->exec("CREATE TABLE IF NOT EXISTS `comments` (
     `id` INT PRIMARY KEY AUTO_INCREMENT,
     `name` VARCHAR(30),
-    `email` VARCHAR(320)
+    `email` VARCHAR(320),
+    `body` VARCHAR(255),
+    `approved` BOOLEAN DEFAULT false
 )");
 
 $db->exec("CREATE TABLE IF NOT EXISTS `users` (
